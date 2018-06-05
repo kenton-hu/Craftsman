@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/version_update_top"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+       	android:layout_centerHorizontal="true"
+       	android:layout_marginTop="100dp"
+        android:background="@drawable/bg_update" >
+        
+        <ImageView 
+            android:id="@+id/cancle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/cancel"/>
+        
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text="wifi环境下更新更加快捷哦~"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/tip"
+            android:gravity="center"
+            android:text="立即升级"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_update_btn"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/tv_update_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_above="@id/update"
+            android:layout_centerHorizontal="true"
+            android:text="v1.7"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

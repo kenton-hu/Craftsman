@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="泥工"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/choice" 
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/topRelative"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+            android:id="@+id/lyt_evaluate"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal">
+            
+            <TextView 
+                android:id="@+id/evaluatetext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textColor="#f77900"
+                android:gravity="center|center_horizontal"
+                android:text="@string/evaluatemax"/>
+            
+            <ImageView 
+                android:id="@+id/evaluateimg"
+	            android:layout_width="15dip"
+            	android:layout_height="10dip"
+            	android:layout_marginLeft="5dp"
+            	android:layout_toRightOf="@id/evaluatetext"
+            	android:layout_centerVertical="true"
+            	android:background="@drawable/down_yellow"
+            	android:gravity="center_vertical|center"/>
+            
+            <View
+                android:id="@+id/bg_evaluate" 
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="2dp"
+                android:background="#f77900"/>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/lyt_distance"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:id="@+id/distancetext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/distancemin"/>
+            
+            <ImageView 
+                android:id="@+id/distancetimg"
+	            android:layout_width="15dip"
+            	android:layout_height="10dip"
+            	android:layout_marginLeft="5dp"
+            	android:layout_toRightOf="@id/distancetext"
+            	android:background="@drawable/down_black"
+            	android:layout_centerInParent="true"
+            	android:gravity="center_vertical|center"/>
+            <View 
+                android:id="@+id/bg_distance" 
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="#f77900"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <ListView 
+        android:id="@+id/craftmanlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="#ebebeb"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/gainsboro"
+        android:layout_below="@id/choice"/>
+        
+</RelativeLayout>

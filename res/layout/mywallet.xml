@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/mywallet"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+         <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/walletinfo"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/mylayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_below="@id/topRelative"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/mywallet"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="@string/walletbalance"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+        
+        <TextView 
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="32sp"/>
+        
+        <Button 
+            android:id="@+id/next"
+            android:gravity="center"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:text="@string/withdrawals"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_click"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    
+</RelativeLayout>

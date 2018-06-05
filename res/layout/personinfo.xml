@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personinfo"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/topRelative"
+        android:background="#ebebeb"
+        android:orientation="vertical">
+        
+        <!-- 头像 -->
+        <RelativeLayout 
+            android:id="@+id/lyt_head"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/headimg"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+	            android:id="@+id/open1"
+	            android:layout_height="20dp"
+	            android:layout_width="13dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+            <com.ktn.craftsman.util.RoundImageView
+                android:id="@+id/img_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/open1"
+                android:scaleType="fitXY"
+                android:src="@drawable/defalut"/>
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <!-- 姓名 -->
+        <RelativeLayout 
+            android:id="@+id/lyt_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+	            android:id="@+id/open2"
+	            android:layout_height="20dp"
+	            android:layout_width="13dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+            <TextView 
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@id/open2"
+                android:text="王晓伟"
+                android:textColor="#9e9e9e"
+                android:textSize="16sp"/>
+            
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        
+        
+        <!-- 性别 -->
+        <RelativeLayout 
+            android:id="@+id/lyt_sex"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/sex"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+	            android:id="@+id/open3"
+	            android:layout_height="20dp"
+	            android:layout_width="13dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+            <TextView 
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@id/open3"
+                android:text="男"
+                android:textColor="#9e9e9e"
+                android:textSize="16sp"/>
+            
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <!-- 修改密码-->
+        <RelativeLayout 
+            android:id="@+id/lyt_pw"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/modifypw"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+	            android:layout_height="20dp"
+	            android:layout_width="13dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <!-- 自我介绍 -->
+        <RelativeLayout 
+            android:id="@+id/lyt_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/introduce"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+                android:id="@+id/open4"
+	            android:layout_height="20dp"
+	            android:layout_width="13dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+            <TextView 
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/text1"
+                android:layout_toLeftOf="@id/open4"
+                android:maxLines="2"
+                android:maxLength="20"
+                android:textColor="#9e9e9e"
+                android:textSize="16sp"/>
+            
+            
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>

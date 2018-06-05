@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/addcard"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/mylayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_below="@id/topRelative"
+        android:orientation="vertical">
+        
+        <!-- 真实姓名 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/realname"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            
+            <EditText 
+	            android:id="@+id/setpw"
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:layout_width="match_parent"
+	            android:layout_marginLeft="15dp"
+	            android:paddingLeft="5dp"
+	            android:textColor="@color/black"
+	            android:background="@null"
+	            android:hint="@string/realname_hint"
+	            android:textSize="16sp"/>
+            
+        </LinearLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <!-- 身份证号 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/IDnumber"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            
+            <EditText
+                android:id="@+id/ID" 
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:layout_width="match_parent"
+	            android:layout_marginLeft="15dp"
+	            android:paddingLeft="5dp"
+	            android:textColor="@color/black"
+	            android:background="@null"
+	            android:hint="@string/IDnumber_hint"
+	            android:textSize="16sp"/>
+            
+        </LinearLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        <RelativeLayout 
+            android:id="@+id/bankchoose"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:id="@+id/bank"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:text="@string/bank"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            
+            <TextView 
+                android:id="@+id/bankchosed"
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:layout_width="match_parent"
+	            android:layout_marginLeft="15dp"
+	            android:paddingLeft="5dp"
+	            android:layout_toRightOf="@id/bank"
+	            android:textColor="#b0b0b0"
+	            android:background="@null"
+	            android:text="@string/bank_hint"
+	            android:textSize="16sp"/>
+            
+            <ImageView 
+	            android:layout_height="20dp"
+	            android:layout_width="12dp"
+	            android:layout_alignParentRight="true"
+             	android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="8dp"
+	            android:background="@drawable/open"/>
+            
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <!-- 银行卡号 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/bankcardnum"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            
+            <EditText 
+                android:id="@+id/bankID"
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:layout_width="match_parent"
+	            android:layout_marginLeft="15dp"
+	            android:paddingLeft="5dp"
+	            android:textColor="#b0b0b0"
+	            android:background="@null"
+	            android:hint="@string/bankcardnum_hint"
+	            android:textSize="16sp"/>
+            
+        </LinearLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/addcard_tip"
+            android:textColor="@color/red"
+            android:textSize="14sp"/>
+        
+        <Button 
+            android:id="@+id/next"
+            android:gravity="center"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:text="@string/addcard_comform"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_click"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    
+</RelativeLayout>

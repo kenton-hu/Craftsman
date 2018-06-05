@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/p55"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="3dp"
+        android:gravity="bottom" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center|center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/menu_home"
+                    style="@style/bottombar_radioButton"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/icon_home_btn"
+                    android:text="@string/home" />
+
+                <RadioButton
+                    android:id="@+id/menu_history"
+                    style="@style/bottombar_radioButton"
+                    android:button="@null"
+                    android:drawableTop="@drawable/icon_history_btn"
+                    android:text="@string/history" />
+
+                <RadioButton
+                    android:id="@+id/menu_settings"
+                    style="@style/bottombar_radioButton"
+                    android:button="@null"
+                    android:drawableTop="@drawable/icon_settings_btn"
+                    android:text="@string/settings" />
+
+            </RadioGroup>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View 
+        android:id="@+id/divide"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_above="@+id/main_tab"
+        android:background="#eeeeee"/>
+    
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/divide"
+        android:background="@color/white" />
+
+</RelativeLayout>

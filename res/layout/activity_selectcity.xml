@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3" >
+
+    <RelativeLayout
+        android:id="@+id/layhead"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+        
+<TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+           android:text="选择城市"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_below="@+id/layhead"
+        android:padding="10dip" >
+
+        <EditText
+            android:id="@+id/sh"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/searchedit"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="请输入城市名称"
+            android:padding="10dip"
+            android:textColor="#515151"
+            android:textSize="13dp" >
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gps_city_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_lay" >
+
+        <TextView
+            android:id="@+id/alpha"
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="#B7B7B7"
+            android:paddingBottom="2dip"
+            android:paddingLeft="13dip"
+            android:paddingRight="0dp"
+            android:paddingTop="2dip"
+            android:textColor="#515151"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lng_city_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/alpha"
+            android:background="@drawable/wireframe"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/ic_citylist_gps" />
+
+            <TextView
+                android:id="@+id/lng_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:text="正在定位所在城市.."
+                android:textColor="#515151" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gps_city_lay"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@color/gainsboro"
+        android:scrollbars="none" />
+
+    <com.ktn.craftsman.adapter.MyLetterListView
+        android:id="@+id/MyLetterListView01"
+        android:layout_width="30dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gps_city_lay" />
+
+</RelativeLayout>

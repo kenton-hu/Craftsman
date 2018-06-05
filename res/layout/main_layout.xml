@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/main_tab_layout"/>
+    
+	<RelativeLayout 
+        android:id="@+id/adlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView 
+            android:id="@+id/adimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <TextView 
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5s"
+            android:textColor="@color/red"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"/>
+    </RelativeLayout>
+	
+</FrameLayout>

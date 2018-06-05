@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/twolyt"
+        android:layout_height="160dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/topRelative"
+        android:background="#1d87b9">
+        <ImageView 
+            android:id="@+id/leftimg"
+            android:layout_height="25dp"
+            android:layout_width="15dp"
+            android:background="@drawable/fenleileft"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+        <TextView 
+            android:id="@+id/lastjob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_click"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/leftimg"/>
+        <ImageView 
+            android:id="@+id/fenlei"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fenlei"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:id="@+id/curjob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_click"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/fenlei"/>
+        
+         <ImageView 
+            android:id="@+id/rightimg"
+            android:layout_height="25dp"
+            android:layout_width="15dp"
+            android:background="@drawable/fenleiright"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+        <TextView 
+            android:id="@+id/nextjob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_click"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@id/rightimg"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:layout_below="@id/twolyt"
+        android:orientation="vertical">
+        
+        <GridView
+            android:id="@+id/two_grid"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:verticalSpacing="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4">
+        </GridView>
+        
+    </LinearLayout>
+</RelativeLayout>

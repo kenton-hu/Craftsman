@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <LinearLayout 
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+	            android:id="@+id/city"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10dp"
+	            android:text="北京"
+	            android:textColor="@color/text_click"
+	            android:textSize="18sp" />
+            <ImageView 
+                android:layout_width="13dip"
+            	android:layout_height="10dip"
+            	android:layout_marginLeft="5dp"
+            	android:layout_centerVertical="true"
+            	android:background="@drawable/down_white"
+            	android:gravity="center_vertical|center"/>
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+           	android:layout_alignParentRight="true"
+            android:background="@drawable/share_selector"
+            android:gravity="center|center_horizontal"
+            android:textSize="16sp" />
+        
+        <ImageView 
+            android:id="@+id/img_search"
+            android:layout_width="22dip"
+           	android:layout_height="22dip"
+           	android:layout_centerVertical="true"
+           	 android:layout_toLeftOf="@id/share"
+           	android:layout_marginRight="10dp"
+           	android:background="@drawable/search_selector"
+           	android:gravity="center_vertical|center"/>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/img_search"
+        	android:layout_toRightOf="@id/location"
+        	android:layout_margin="8dp"
+            android:orientation="horizontal" >
+            <AutoCompleteTextView 
+	            android:id="@+id/edit_search"
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent"
+	            android:lines="1"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:hint="@string/search_tip"
+	            android:completionThreshold ="1" 
+	            android:singleLine="true"
+	            android:imeOptions="actionSearch"
+	            android:dropDownHeight="wrap_content"
+	            android:background="@drawable/search_edit_selector"
+	            android:textColor="@color/black"
+	            android:textSize="16sp" >
+        	</AutoCompleteTextView >
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/mylayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/topRelative"
+        android:orientation="vertical">
+        
+       <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/home_head_newsandweather"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.ktn.craftsman.util.AdvertControl
+                        android:id="@+id/home_advert"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                   <!--  <cn.com.egova.publicinspect.widget.ProgressBarWithText
+                        android:id="@+id/news_data_overtimepross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/news_load_data_fail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="数据加载失败..."
+                        android:textSize="18sp"
+                        android:visibility="gone" /> -->
+                </FrameLayout>
+            </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/input"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/notice"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10dp"
+	            android:text="公告"
+	            android:visibility="gone"
+	            android:textColor="#3bade3"
+	            android:textSize="18sp" />
+            
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                android:layout_marginRight="15dp"
+                android:background="#3bade3"/>
+            
+            <TextView
+                android:id="@+id/noticedetail"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="5dp"
+	            android:textColor="#5c5c5c"
+	            android:textSize="18sp" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/home_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="3dp" >
+        </GridView>
+
+    </LinearLayout>
+
+</RelativeLayout>

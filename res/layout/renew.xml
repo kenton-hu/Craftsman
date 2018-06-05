@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/account_renew"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/mylayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/topRelative"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="方式"/>
+            
+            <TextView 
+                android:id="@+id/mounthtxt"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textColor="@color/deepskyblue"
+                android:background="@drawable/bg_renew_blue"
+                android:text="月费"/>
+            
+            <TextView 
+                android:id="@+id/annualtxt"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/gray"
+                android:background="@drawable/bg_renew_blue"
+                android:text="年费"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="@string/account"/>
+            
+            <TextView 
+                android:id="@+id/fee"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/deepskyblue"/>
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:lines="1"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray"
+                android:text="(该价格由系统决定)"/>
+        </LinearLayout>
+        
+        <Button 
+            android:id="@+id/next"
+            android:gravity="center"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:text="@string/conform_renew"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_click"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#39ace3" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/back"
+            android:textColor="@color/text_click"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/address"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/topRelative"
+        android:orientation="vertical">
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ebebeb"
+            android:gravity="center_vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/myaddress"/>
+            
+            <Button 
+	            android:id="@+id/edit"
+	            android:layout_height="30dp"
+	            android:gravity="center"
+	            android:layout_width="40dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="5dp"
+	            android:textColor="@color/white"
+	            android:text="@string/edit"
+	            android:background="@drawable/btn_click"
+	            android:textSize="16sp"/>
+        </RelativeLayout>
+        
+        <View 
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="#c6c6c6"/>
+        
+        <TextView 
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="河北省唐开市开平区幸福路凯旋大道32号"
+            android:textColor="#adabae"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>

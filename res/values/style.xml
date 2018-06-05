@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+ <style name="Theme.Translucent" parent="android:style/Theme.Translucent"> 
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:colorForeground">#fff</item>  
+      
+</style>
+<style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <!-- 去掉Activity titlebar 和动画有黑边  欢欢新增   <item name="android:windowIsTranslucent">true</item> -->
+    <style name="notitle" parent="android:style/Theme.Black.NoTitleBar"></style>
+
+    <!-- popupwindow_demo 中动画文件   欢欢新增 -->
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    
+	<!-- 从上面进,下面出 -->
+    <style name="Animation_DWAWER">
+        <item name="android:windowEnterAnimation">@anim/pan_top</item>
+        <item name="android:windowExitAnimation">@anim/pan_bottom</item>
+    </style>
+    
+    <!-- 从下面进,上面出 -->
+    <style name="Animation_REVER_DWAWER">
+        <item name="android:windowEnterAnimation">@anim/pan_botom_come_in</item>
+        <item name="android:windowExitAnimation">@anim/pan_bottom</item>
+    </style>
+
+    <!-- 聊天中长按菜单尺寸 -->
+    <style name="messagelongclick">
+        <item name="android:layout_width">@dimen/p50</item>
+        <item name="android:layout_height">@dimen/p40</item>
+    </style>
+
+    <!-- 顶部标题栏标题文本样式 -->
+    <style name="topbarTittleTheme">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 底部控件 -->
+    <style name="bottombar_radioButton">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/fourteen</item>
+        <item name="android:textColor">@drawable/main_tab_font_style</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- 设置中的高度 -->
+    <style name="item_style">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- 设置线条 -->
+    <style name="item_line">
+        <item name="android:layout_height">0.3dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@color/dividing_line_color</item>
+    </style>
+
+    <!--
+    <style name="myProgressBarStyleLarge">
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:indeterminate">false</item>
+
+　　                      <item name="android:indeterminateDrawable">@anim/progress_loading</item>
+
+　　                     <item name="android:minWidth">30dip</item>
+
+　　                     <item name="android:maxWidth">30dip</item>
+
+　　                      <item name="android:minHeight">30dip</item>
+
+　　                       <item name="android:maxHeight">30dip</item>
+    </style>
+    -->
+    <!-- 自定义弹出框    可以去除弹出框阴影，在外层自己设置一层背景达到圆角效果 -->
+    <style name="myDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去掉阴影 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <!-- 欢欢 end -->
+
+
+
+
+
+    <style name="NotificationTitle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- 吴凯 -->
+    <style name="MyDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="companyBcak">
+        <item name="android:layout_width">50dip</item>
+        <item name="android:layout_height">50dip</item>
+    </style>
+
+    <style name="Theme.White" parent="android:Theme">  
+	    <item name="android:windowBackground">@color/white</item>  
+	    <item name="android:windowNoTitle">true</item>  
+	</style>
+	
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Animation.Activity.Style" parent="@android:style/Animation.Activity">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        
+        <item name="android:windowEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/base_slide_right_out</item>
+        
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskCloseEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToBackEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
+    </style>
+
+    <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/base_slide_right_out</item>
+    </style>
+    
+    
+</resources>
